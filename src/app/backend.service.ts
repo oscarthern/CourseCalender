@@ -43,7 +43,7 @@ export class BackendService {
 
   postCanvasKalender(item: any): Observable <CourseCalender> {
     return this.HttpClient
-    .put<CourseCalender>(this.getKursListURL, JSON.stringify(item), this.httpOptions)
+    .post<CourseCalender>(this.getKursListURL, JSON.stringify(item), this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
