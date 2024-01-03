@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BackendService } from '../backend.service';
 import { MatTableDataSource } from '@angular/material/table';
-
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-course-calender',
@@ -13,7 +14,12 @@ export class CourseCalenderComponent implements OnInit {
   dataSource = new MatTableDataSource(); 
   displayedColumns: string[] = ['title', 'start_at', 'end_at', 'location_name', 'location_adress']; 
 
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort!: MatSort;
+
  ngOnInit(){
+  this.dataSource.paginator = this.paginator;
+  this.dataSource.sort = this.sort;
   this.getCalenderEventList();
     }
   
@@ -25,7 +31,6 @@ export class CourseCalenderComponent implements OnInit {
   getCalenderEventList(){
   this.BackendService.getKursList().subscribe((response: any) => {
     this.dataSource.data = response; 
-
     });
   }
 }
