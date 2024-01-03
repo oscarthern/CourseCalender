@@ -12,7 +12,7 @@ import { MatSort } from '@angular/material/sort';
 export class CourseCalenderComponent implements OnInit {
   constructor(private BackendService: BackendService){}
   dataSource = new MatTableDataSource(); 
-  displayedColumns: string[] = ['title', 'start_at', 'end_at', 'location_name', 'location_adress']; 
+  displayedColumns: string[] = ['title', 'start_at', 'end_at', 'location_name', 'location_address']; 
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
