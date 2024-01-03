@@ -75,3 +75,10 @@ table, th, td {
     min-width: 196px;
   }
 }
+
+
+.subway {
+  text-overflow:unset;
+  overflow:visible;
+  text-wrap:pretty;
+}
