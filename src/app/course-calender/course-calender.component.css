@@ -21,13 +21,11 @@ body {
     position: relative;
 }
 
-
 table, th, td {
     border: 1px solid;
     border-color: hsla(0, 0%, 44%, 0.603);
     border-spacing: 2px
   }
-
 
 .button-64 {
   align-items: center;
