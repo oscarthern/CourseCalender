@@ -11,6 +11,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-
+    NoopAnimationsModule,
 
     MatTableModule,
     MatPaginatorModule,
