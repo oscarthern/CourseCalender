@@ -9,7 +9,9 @@ import { CourseCalender } from './course-calender';
   providedIn: 'root'
 })
 export class BackendService {
-  private getKursListURL: string ='http://localhost:8080/restClient-1.0-SNAPSHOT/api/apa/events';
+  private getKursListURL: string ='http://localhost:8080/restClient-1.0-SNAPSHOT/api/events';
+  private postKursKalenderURL: string = 'http://localhost:8080/restClient-1.0-SNAPSHOT/api/toCanvas';
+
   constructor(private HttpClient: HttpClient) { }
   httpOptions = {
     headers: new HttpHeaders({
@@ -43,7 +45,7 @@ export class BackendService {
 
   postCanvasKalender(item: any): Observable <CourseCalender> {
     return this.HttpClient
-    .post<CourseCalender>(this.getKursListURL, JSON.stringify(item), this.httpOptions)
+    .post<CourseCalender>(this.postKursKalenderURL, JSON.stringify(item), this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
