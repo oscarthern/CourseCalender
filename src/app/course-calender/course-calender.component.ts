@@ -27,7 +27,7 @@ export class CourseCalenderComponent implements OnInit {
     this.BackendService.postCanvasKalender(this.dataSource.data).subscribe((response: any) =>{
       this.getCalenderEventList();
     })
-    
+
   }
   getCalenderEventList(){
   this.BackendService.getKursList().subscribe((response: any) => {
