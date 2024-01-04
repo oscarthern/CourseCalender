@@ -10,12 +10,13 @@ import { CourseCalender } from './course-calender';
 })
 export class BackendService {
   private getKursListURL: string ='http://localhost:8080/restClient-1.0-SNAPSHOT/api/events';
-  private postKursKalenderURL: string = 'http://localhost:8080/restClient-1.0-SNAPSHOT/api/toCanvas';
+  private postKursKalenderURL: string ='https://ltu.instructure.com/api/v1/calendar_events.json';
 
   constructor(private HttpClient: HttpClient) { }
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 3755~bgSnuO5yTVAdT2rdh7xPFWVAmYM43CBgcRpwyr0xKwKxmkhB0Ou9BwdqDwqDVPJF'
     })
   }
    // Handle API errors

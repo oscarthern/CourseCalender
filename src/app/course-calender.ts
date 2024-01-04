@@ -5,6 +5,7 @@ export interface CourseCalender {
     id: number;
     location_address: string;
     location_name: string;
-    start_at: Date
+    start_at: Date;
     title: string;
+    context_code: string;
 }
