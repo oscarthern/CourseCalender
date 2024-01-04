@@ -16,9 +16,13 @@ export class BackendService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 3755~bgSnuO5yTVAdT2rdh7xPFWVAmYM43CBgcRpwyr0xKwKxmkhB0Ou9BwdqDwqDVPJF'
+      'Authorization': 'Bearer 3755~bgSnuO5yTVAdT2rdh7xPFWVAmYM43CBgcRpwyr0xKwKxmkhB0Ou9BwdqDwqDVPJF',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, GET, OPTIONS', 
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization'
     })
   }
+  
    // Handle API errors
    handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
