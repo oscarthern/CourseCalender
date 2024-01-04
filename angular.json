@@ -69,11 +69,11 @@
           "configurations": {
             "production": {
               "buildTarget": "CourseCalender:build:production",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
               "buildTarget": "CourseCalender:build:development",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
