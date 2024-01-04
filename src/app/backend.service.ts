@@ -10,7 +10,7 @@ import { CourseCalender } from './course-calender';
 })
 export class BackendService {
   private getKursListURL: string ='http://localhost:8080/restClient-1.0-SNAPSHOT/api/events';
-  private postKursKalenderURL: string ='https://ltu.instructure.com/api/v1/calendar_events.json';
+  private postKursKalenderURL: string ='https://ltu.instructure.com/api/v1/calendar_events';
 
   constructor(private HttpClient: HttpClient) { }
   httpOptions = {
