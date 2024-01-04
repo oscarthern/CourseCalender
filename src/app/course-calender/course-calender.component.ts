@@ -23,8 +23,8 @@ export class CourseCalenderComponent implements OnInit {
   this.getCalenderEventList();
     }
   
-  SparatillCanvas(dataSource : any){
-    this.BackendService.postCanvasKalender(this.dataSource).subscribe((response: any) =>{
+  SparatillCanvas(){
+    this.BackendService.postCanvasKalender(this.dataSource.data).subscribe((response: any) =>{
       this.getCalenderEventList();
     })
   }
