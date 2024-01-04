@@ -1,6 +1,6 @@
 {
-"/api/v1/calendar_events": {
-    "target": "https://ltu.instructure.com",
+"/api/toCanvas": {
+    "target": "http://localhost:8080/restClient-1.0-SNAPSHOT",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug"
