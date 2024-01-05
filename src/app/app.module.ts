@@ -12,6 +12,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,12 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     MatInputModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: 
+      {appearance: 'outline', 
+      floatLabel: 'auto'},
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,7 @@ import { BackendService } from '../backend.service';
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
+
 export class SearchComponent {
   constructor(private router: Router, private BackendService: BackendService){}
   Search(): void{

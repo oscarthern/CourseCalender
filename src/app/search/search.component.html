@@ -1,5 +1,7 @@
 <p> Hej </p>
 <mat-form-field>
-    <input matInput type="search" (keyup)="Search()" placeholder="search here" class="search-input">
+    <mat-label>Sök</mat-label>
+        <input matInput type="search" (keyup)="Search()" placeholder="Ange kurskod">
+    
 </mat-form-field> 
 <button [routerLink]="['/CourseCalender']"> Kurs Test </button>
