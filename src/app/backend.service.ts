@@ -40,7 +40,7 @@ export class BackendService {
     return this.HttpClient
     .get<CourseCalender>(this.getKursListURL)
     .pipe(
-      retry(2),
+      retry(1),
       catchError(this.handleError)
     )
   }
@@ -49,7 +49,7 @@ export class BackendService {
     return this.HttpClient
     .post<CourseCalender>(this.postKursKalenderURL, JSON.stringify(item), this.httpOptions)
     .pipe(
-      retry(2),
+      retry(1),
       catchError(this.handleError)
     )
   }
