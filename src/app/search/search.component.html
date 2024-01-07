@@ -1,6 +1,9 @@
-<mat-form-field>
+<body><mat-form-field>
     <mat-label>Sök</mat-label>
         <input matInput type="search" (keyup)="Search()" placeholder="Ange kurskod">
 </mat-form-field> 
 
-<button [routerLink]="['/CourseCalender']"> Välj Kurs </button>
+<div>
+<button class="button-64" role="button" [routerLink]="['/CourseCalender']"> Välj Kurs </button>
+</div>
+</body>
