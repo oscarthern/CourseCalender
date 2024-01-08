@@ -11,6 +11,7 @@ import { CourseCalender } from './course-calender';
 export class BackendService {
   private getKursListURL: string ='http://localhost:8080/restClient-1.0-SNAPSHOT/api/events';
   private postKursKalenderURL: string ='http://localhost:8080/restClient-1.0-SNAPSHOT/api/toCanvas';
+  
 
   constructor(private HttpClient: HttpClient) { }
   httpOptions = {
