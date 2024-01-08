@@ -6,7 +6,7 @@ import { SearchComponent } from './search/search.component';
 const routes: Routes = [
   { path: '', redirectTo: '/Search', pathMatch: 'full'}, 
 { path: 'Search', component: SearchComponent},
-{ path: 'CourseCalender', component: CourseCalenderComponent}
+{ path: 'courseCalender/:signatur', component: CourseCalenderComponent}
 ];
 
 @NgModule({
