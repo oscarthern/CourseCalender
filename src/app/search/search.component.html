@@ -1,9 +1,26 @@
-<body><mat-form-field>
-    <mat-label>Sök</mat-label>
-        <input matInput type="search" (keyup)="Search()" placeholder="Ange kurskod">
-</mat-form-field> 
-
-<div>
-<button class="button-64" role="button" [routerLink]="['/CourseCalender']"> Välj Kurs </button>
-</div>
+<body>
+    <mat-form-field>
+        <mat-label>Sök</mat-label>
+        <input matInput type="search" [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Ange kurskod">
+    </mat-form-field>
+    <ul>
+        <li *ngFor="let item of filteredSearchData" [routerLink]="['/courseCalender', item.signatur]">
+            <!--<a href="#" (click)="navigateToCourseCalender(item.signatur)" [routerLink]="['/courseCalender', item.signatur]">-->
+                <div>
+                    <strong>Kurskod:</strong> {{ item.kurskod }} |
+                </div>
+                <div>
+                    <strong>Kommentar:</strong> {{ item.kommentar }} |
+                </div>
+                <div>
+                    <strong>Namn:</strong> {{ item.namn }} |
+                </div>
+                <div>
+                    <strong>SpecBenamning:</strong> {{ item.specBenamning }}|
+                </div>
+                <div>
+                    <strong>ID:</strong> {{ item.id }}
+                </div>
+        </li>
+    </ul>
 </body>
