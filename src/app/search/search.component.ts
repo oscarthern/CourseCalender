@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { BackendService } from '../backend.service';
 import { SearchData } from '../search-data';
@@ -10,16 +10,18 @@ import { SearchData } from '../search-data';
 })
 
 export class SearchComponent implements OnInit {
-
+  selectedValue!: string;
+  panelsToShow = 12;
   searchData: any;
   searchTerm = '';
   filteredSearchData: any[] = [];
-
+  //@ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  
   constructor(private router: Router, private BackendService: BackendService) { }
 
    ngOnInit(): void {
       this.getSearchData();
-      console.log("search component");
+    //  this.searchData.paginator = this.paginator;
       }
 
       navigateToCourseCalender(signatur: string) {
@@ -27,7 +29,6 @@ export class SearchComponent implements OnInit {
         this.router.navigate(['courseCalender/' + signatur])
       }
 
-      
       getSearchData() {
         
         this.BackendService.getSearchData().subscribe(data => {
@@ -45,8 +46,6 @@ export class SearchComponent implements OnInit {
         });
        }
 
-  
-
   search() {
     if (this.searchTerm.trim() === '') {
       this.filteredSearchData = [...this.searchData];
@@ -58,5 +57,4 @@ export class SearchComponent implements OnInit {
       );
     }
   }
- 
 }
