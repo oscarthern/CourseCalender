@@ -11,9 +11,7 @@ body {
         float: inline-start;
         width: 10%;
         padding-left: 12%
-        
     }
-
 
     .search {
         display: flexbox;
@@ -32,7 +30,6 @@ body {
         flex-wrap: wrap;
         margin-inline-start: 12%;
         margin-inline-end: 12%;
-
     }
 
     mat-expansion-panel-body {
@@ -49,7 +46,6 @@ body {
         flex-wrap: wrap;
         justify-content: flex-start;
         align-content: center;
-
     }
 
     mat-toolbar {

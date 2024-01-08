@@ -15,13 +15,11 @@ export class SearchComponent implements OnInit {
   searchData: any;
   searchTerm = '';
   filteredSearchData: any[] = [];
-  //@ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   
   constructor(private router: Router, private BackendService: BackendService) { }
 
    ngOnInit(): void {
       this.getSearchData();
-    //  this.searchData.paginator = this.paginator;
       }
 
       navigateToCourseCalender(signatur: string) {
