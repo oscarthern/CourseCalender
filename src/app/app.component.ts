@@ -10,7 +10,6 @@ export class AppComponent {
 
   constructor(private router: Router) { }
   NgOnInit(){
-
   }
 
   title = 'CourseCalender';
